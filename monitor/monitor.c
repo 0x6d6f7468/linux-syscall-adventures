@@ -21,7 +21,7 @@ MODULE_LICENSE("GPL");
 
 typedef int (* syscall_wrapper)(struct pt_regs *);
 
-#define WATCHED_CALL __NR_bind
+#define WATCHED_CALL __NR_getuid
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(5,7,0)
 #define KPROBE_LOOKUP 1
