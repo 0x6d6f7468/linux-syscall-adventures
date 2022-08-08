@@ -55,7 +55,6 @@ int disable_page_rw(void *ptr){
 
 syscall_wrapper original_syscall;
 
-//asmlinkage int log_syscall(int sockfd, const struct sockaddr *addr, int addrlen) {
 int log_syscall(struct pt_regs *regs) {
     pr_info("[monitor] getuid was called\n");
     return (*original_syscall)(regs);
